@@ -7,6 +7,8 @@ dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 if (!process.env.DATABASE_URL) {
   console.warn('CRITICAL: DATABASE_URL is missing from process.env');
+} else {
+  console.log('DATABASE_URL:', process.env.DATABASE_URL);
 }
 
 const prisma = new PrismaClient();
